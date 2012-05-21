@@ -29,7 +29,10 @@ namespace BeanCounter
         {
             if (args != null && args.Length != 0)
             {
-                LoadOFXfile(args);
+                if (bwLoadOFXfile.IsBusy == false)
+                {
+                    LoadOFXfile(args);
+                }
             }
 
         }
